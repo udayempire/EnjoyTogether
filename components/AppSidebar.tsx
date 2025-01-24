@@ -18,7 +18,7 @@ const items = [
     { title: "Logout", url: "#", icon:LogOutIcon },
 ];
 
-export function AppSidebar({ children }: { children: React.ReactNode }) {
+export function AppSidebar({ children }: { children?: React.ReactNode }) {
     return (
         <div className="bg-black font-">
             <Sidebar className=" border-b border-zinc-700" >
@@ -42,9 +42,8 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
                         </SidebarGroupContent>
                     </SidebarGroup>
                 </SidebarContent>
-                <div>{children}</div>
+                {children}
             </Sidebar>
-
         </div>
     );
 }
